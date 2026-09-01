@@ -133,12 +133,35 @@ def extract_text_from_image_safe(image_file) -> tuple[str, str | None]:
         return "", f"OCR extraction error: {str(e)}"
 
 
+def get_frontend_file(filename: str):
+    candidates = [
+        os.path.join(PROJECT_ROOT, "frontend", filename),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "frontend", filename),
+        os.path.join(os.getcwd(), "frontend", filename),
+        os.path.join(os.getcwd(), filename),
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    return os.path.join(FRONTEND_DIR, filename)
+
+
 # ---------------- WEB & API ENDPOINTS ----------------
 
 @app.route("/", methods=["GET"])
 def index():
-    """Serves the main Cyber Defense Console UI directly at http://localhost:5000/"""
-    return send_file(os.path.join(FRONTEND_DIR, "index.html"))
+    """Serves the main Cyber Defense Console UI directly."""
+    return send_file(get_frontend_file("index.html"))
+
+
+@app.route("/style.css", methods=["GET"])
+def style_css():
+    return send_file(get_frontend_file("style.css"), mimetype="text/css")
+
+
+@app.route("/script.js", methods=["GET"])
+def script_js():
+    return send_file(get_frontend_file("script.js"), mimetype="application/javascript")
 
 
 @app.route("/api/health", methods=["GET"])
@@ -150,6 +173,7 @@ def health():
         "hackathon": "Razorpay Buildathon",
         "active_agents": [
             "OSINT & Network Intelligence Agent",
+            "Live Web & Content Forensic Agent",
             "Fintech & Payment Forensic Agent",
             "Cognitive & Social Engineering Agent",
             "Autonomous Action & Defense Agent"
