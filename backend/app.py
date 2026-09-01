@@ -149,21 +149,28 @@ def get_frontend_file(filename: str):
 # ---------------- WEB & API ENDPOINTS ----------------
 
 @app.route("/", methods=["GET"])
+@app.route("/index.html", methods=["GET"])
+@app.route("/api", methods=["GET"])
+@app.route("/api/", methods=["GET"])
+@app.route("/api/index.py", methods=["GET"])
 def index():
     """Serves the main Cyber Defense Console UI directly."""
     return send_file(get_frontend_file("index.html"))
 
 
 @app.route("/style.css", methods=["GET"])
+@app.route("/api/style.css", methods=["GET"])
 def style_css():
     return send_file(get_frontend_file("style.css"), mimetype="text/css")
 
 
 @app.route("/script.js", methods=["GET"])
+@app.route("/api/script.js", methods=["GET"])
 def script_js():
     return send_file(get_frontend_file("script.js"), mimetype="application/javascript")
 
 
+@app.route("/health", methods=["GET"])
 @app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({
@@ -179,6 +186,19 @@ def health():
             "Autonomous Action & Defense Agent"
         ]
     })
+
+
+@app.errorhandler(404)
+def handle_404(e):
+    """Fallback handler so any unmapped UI route returns index.html gracefully."""
+    path = request.path
+    if path.endswith(".css"):
+        return send_file(get_frontend_file("style.css"), mimetype="text/css")
+    if path.endswith(".js"):
+        return send_file(get_frontend_file("script.js"), mimetype="application/javascript")
+    if path.startswith("/api/"):
+        return jsonify({"error": "Endpoint not found", "path": path}), 404
+    return send_file(get_frontend_file("index.html"))
 
 
 @app.route("/analyze", methods=["POST"])
