@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sentinel AI 2.0 - Autonomous Multi-Agent Cyber Defense</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cybernetic Grid & Glow Background -->
+  <div class="cyber-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="brand-group">
+      <div class="logo-shield">
+        <span class="shield-icon">🛡️</span>
+      </div>
+      <div>
+        <div class="brand-title">Sentinel AI <span class="version-tag">2.0 Multi-Agent</span></div>
+        <div class="brand-sub">Autonomous Financial Fraud & Phishing Defense Platform</div>
+      </div>
+    </div>
+    
+    <div class="header-badges">
+      <div class="badge-pill razorpay-badge">
+        <span class="pulse-dot"></span> Razorpay Buildathon Edition
+      </div>
+      <div class="badge-pill swarm-status">
+        <span>🤖 5 Agents Online</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="main-container">
+    
+    <!-- TOP TOOLBAR: ONE-CLICK ATTACK PRESETS -->
+    <div class="presets-toolbar">
+      <div class="section-label">⚡ ONE-CLICK ATTACK SCENARIO PRESETS:</div>
+      <div class="preset-pills" id="presetPills">
+        <button class="preset-btn" data-preset="fake_razorpay">🎯 Fake Razorpay Phishing</button>
+        <button class="preset-btn" data-preset="upi_refund">💸 UPI PIN Reversal Trap</button>
+        <button class="preset-btn" data-preset="sbi_kyc">🏦 Bank KYC Panic SMS</button>
+        <button class="preset-btn" data-preset="job_deposit">💼 Telegram Job Bait</button>
+        <button class="preset-btn legit" data-preset="legit_invoice">✅ Legit Invoice</button>
+      </div>
+    </div>
+
+    <!-- 2-COLUMN BALANCED WORKSPACE GRID -->
+    <div class="workspace-grid">
+      
+      <!-- LEFT PANEL: INGESTION, AGENT STATUS & TELEMETRY STREAM -->
+      <section class="panel input-panel">
+        
+        <!-- Text & OCR Input Card -->
+        <div class="input-card">
+          <div class="card-header">
+            <span class="header-title">📥 Target Communication Payload</span>
+            <span class="sub-text">SMS, WhatsApp, Phishing Link, Email, or Payment VPA</span>
+          </div>
+
+          <textarea id="messageInput" placeholder="Paste suspicious message, URL, SMS, or payment demand here..."></textarea>
+          
+          <!-- OCR Screenshot Upload Box -->
+          <div class="upload-container">
+            <label class="upload-dropzone" id="dropZone">
+              <input type="file" id="imageInput" accept="image/*" hidden />
+              <div class="dropzone-content">
+                <span class="upload-icon">📸</span>
+                <div>
+                  <strong>Upload / Drop Screenshot</strong>
+                  <span class="hint">Neural ONNX OCR Vision</span>
+                </div>
+              </div>
+            </label>
+            <div id="fileStatus" class="file-status-tag hidden">No file selected</div>
+          </div>
+
+          <!-- Action Button -->
+          <button class="deploy-btn" id="analyzeBtn" onclick="runSwarmInvestigation()">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-text">DEPLOY AGENT SWARM</span>
+          </button>
+        </div>
+
+        <!-- AGENT SWARM TOPOLOGY VISUALIZER -->
+        <div class="swarm-topology-card">
+          <div class="card-header">
+            <span class="header-title">🌐 Autonomous Agent Swarm Status</span>
+          </div>
+          <div class="agent-nodes-grid">
+            <div class="agent-node" id="node-osint">
+              <div class="node-icon">🔍</div>
+              <div class="node-info">
+                <strong>OSINT Agent</strong>
+                <span>DNS, WHOIS & Typosquat</span>
+              </div>
+              <div class="node-status" id="status-osint">READY</div>
+            </div>
+
+            <div class="agent-node" id="node-web">
+              <div class="node-icon">🌐</div>
+              <div class="node-info">
+                <strong>Live Web Agent</strong>
+                <span>HTTP Probe & DOM Forensics</span>
+              </div>
+              <div class="node-status" id="status-web">READY</div>
+            </div>
+
+            <div class="agent-node" id="node-fintech">
+              <div class="node-icon">💳</div>
+              <div class="node-info">
+                <strong>Fintech Agent</strong>
+                <span>Razorpay & UPI Forensics</span>
+              </div>
+              <div class="node-status" id="status-fintech">READY</div>
+            </div>
+
+            <div class="agent-node" id="node-cognitive">
+              <div class="node-icon">🧠</div>
+              <div class="node-info">
+                <strong>Cognitive Agent</strong>
+                <span>Psychological Lures</span>
+              </div>
+              <div class="node-status" id="status-cognitive">READY</div>
+            </div>
+
+            <div class="agent-node" id="node-defense">
+              <div class="node-icon">🛡️</div>
+              <div class="node-info">
+                <strong>Remediation Agent</strong>
+                <span>Takedown & Defense</span>
+              </div>
+              <div class="node-status" id="status-defense">READY</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIVE AGENT THOUGHT & TOOL TELEMETRY STREAM (Left Panel Base) -->
+        <div class="telemetry-card">
+          <div class="card-header flex-between">
+            <span class="header-title">📡 Live Agent Thought & Tool Stream</span>
+            <span class="live-indicator"><span class="pulse-dot green"></span> Live Telemetry</span>
+          </div>
+          <div class="telemetry-console" id="telemetryConsole">
+            <div class="telemetry-item system">
+              <span class="timestamp">[SYSTEM]</span> Swarm Orchestrator initialized. Waiting for payload deployment...
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RIGHT PANEL: INVESTIGATION RESULTS & REMEDIATION -->
+      <section class="panel results-panel" id="resultsPanel">
+        
+        <!-- STANDBY HUD (Visible before analysis) -->
+        <div class="standby-card" id="standbyCard">
+          <div class="standby-icon-wrapper">
+            <div class="standby-pulse-ring"></div>
+            <div class="standby-shield-icon">🛡️</div>
+          </div>
+          <h2 class="standby-title">Autonomous Swarm On Standby</h2>
+          <p class="standby-subtitle">
+            Select any <strong>1-Click Attack Preset</strong> above, paste a suspicious message/link, or upload a screenshot to deploy the 5-Agent Swarm.
+          </p>
+
+          <div class="standby-capabilities-grid">
+            <div class="capability-item">
+              <span class="cap-icon">🔍</span>
+              <div>
+                <strong>Levenshtein Typosquatting</strong>
+                <span>Detects brand lookalikes (razorpayy, rzp)</span>
+              </div>
+            </div>
+            <div class="capability-item">
+              <span class="cap-icon">🌐</span>
+              <div>
+                <strong>Live HTTP Probing</strong>
+                <span>Actively verifies 200 OK vs 404 dead links</span>
+              </div>
+            </div>
+            <div class="capability-item">
+              <span class="cap-icon">💳</span>
+              <div>
+                <strong>Fintech & UPI PIN Forensics</strong>
+                <span>Identifies reverse debit collect traps</span>
+              </div>
+            </div>
+            <div class="capability-item">
+              <span class="cap-icon">🚨</span>
+              <div>
+                <strong>Automated Remediation</strong>
+                <span>Generates CERT-In & Razorpay takedowns</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS CONTAINER (Unhidden when analysis runs) -->
+        <div class="results-container hidden" id="resultsContainer">
+          
+          <!-- Threat Verdict Card -->
+          <div class="verdict-card" id="verdictCard">
+            <div class="verdict-header">
+              <div>
+                <span class="sub-label">SWARM CONSENSUS VERDICT</span>
+                <h1 class="risk-heading" id="riskHeading">Analyzing...</h1>
+              </div>
+              <div class="risk-badge-large" id="riskBadgeLarge">EVALUATING</div>
+            </div>
+
+            <p class="recommendation-banner" id="recommendationBanner"></p>
+
+            <!-- Confidence Gauge & Threat Vectors -->
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <div class="metric-label">Composite Confidence</div>
+                <div class="metric-value" id="confidenceVal">0%</div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" id="confidenceBar"></div>
+                </div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-label">Network & OSINT Risk</div>
+                <div class="metric-value" id="osintRiskVal">0%</div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill red" id="osintBar"></div>
+                </div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-label">Live Web / HTTP Risk</div>
+                <div class="metric-value" id="webRiskVal">0%</div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill cyan" id="webBar"></div>
+                </div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-label">Fintech / Payment Risk</div>
+                <div class="metric-value" id="fintechRiskVal">0%</div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill orange" id="fintechBar"></div>
+                </div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-label">Cognitive Panic Index</div>
+                <div class="metric-value" id="cognitiveRiskVal">0%</div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill purple" id="cognitiveBar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXPLAINABLE FORENSIC FINDINGS -->
+          <div class="findings-card">
+            <div class="card-header">
+              <span class="header-title">🔍 Cross-Agent Forensic Evidence Breakdown</span>
+            </div>
+            <div class="findings-grid" id="findingsGrid"></div>
+          </div>
+
+          <!-- AUTONOMOUS REMEDIATION & INCIDENT RESPONSE HUB -->
+          <div class="remediation-card">
+            <div class="card-header">
+              <span class="header-title">🛡️ Autonomous Defense & Remediation Hub</span>
+              <span class="sub-text">One-click automated counter-measures</span>
+            </div>
+
+            <div class="action-buttons-row">
+              <button class="action-btn" onclick="openModal('cybercrimeModal')">
+                <span>🚨</span> View CERT-In Complaint Draft
+              </button>
+              <button class="action-btn" onclick="openModal('takedownModal')">
+                <span>✉️</span> Razorpay Abuse Notice
+              </button>
+              <button class="action-btn secondary" onclick="downloadIncidentDossier()">
+                <span>💾</span> Export Evidence Dossier (JSON)
+              </button>
+            </div>
+
+            <!-- Immediate Defense Playbook Steps -->
+            <div class="playbook-container">
+              <div class="playbook-title">📋 Immediate Mitigation Playbook:</div>
+              <div class="playbook-steps" id="playbookSteps"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- MODALS FOR AUTONOMOUS ARTIFACTS -->
+  <!-- Cybercrime Complaint Modal -->
+  <div class="modal-overlay hidden" id="cybercrimeModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>🚨 National Cyber Crime Portal (1930) Complaint Draft</h3>
+        <button class="modal-close" onclick="closeModal('cybercrimeModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <pre id="cybercrimeDraftText"></pre>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-copy" onclick="copyText('cybercrimeDraftText')">📋 Copy Complaint Draft</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Razorpay Abuse Notice Modal -->
+  <div class="modal-overlay hidden" id="takedownModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>✉️ Razorpay Brand Takedown & Abuse Notice</h3>
+        <button class="modal-close" onclick="closeModal('takedownModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <pre id="takedownBodyText"></pre>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-copy" onclick="copyText('takedownBodyText')">📋 Copy Takedown Notice</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

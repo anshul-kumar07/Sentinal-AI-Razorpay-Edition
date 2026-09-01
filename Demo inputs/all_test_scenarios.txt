@@ -1,0 +1,143 @@
+================================================================================
+          SENTINEL AI 2.0 - COMPREHENSIVE TEST MESSAGES & ATTACK LIBRARY
+          (Copy and paste any of these messages into http://localhost:5000)
+================================================================================
+
+--------------------------------------------------------------------------------
+[CATEGORY 1: RAZORPAY & PAYMENT GATEWAY PHISHING]
+--------------------------------------------------------------------------------
+
+[TEST 1.1 - Fake Razorpay Settlement Hold (Merchant Panic)]
+Dear Merchant, your Razorpay settlement of Rs 48,250 has been put on hold due to compliance discrepancy. To release payment instantly to your bank account, verify your merchant credentials immediately at:
+https://razorpay-merchant-verification.xyz/login?id=94821
+Failure to verify within 24 hours will result in permanent account suspension and regulatory penalty.
+- Razorpay Merchant Risk Desk (support-rzp@okaxis)
+
+[TEST 1.2 - Fake Razorpay POS Terminal Upgrade Phishing]
+Urgent update for Razorpay POS Merchants: Your terminal firmware expires today. Avoid payment failure and penalty of Rs 5000 by updating your business PAN and bank details here:
+https://rzp-pos-activation.site/update
+Support Helpdesk: 9876543210@paytm
+
+[TEST 1.3 - Fake Razorpay 50% Discount Checkout Gateway]
+Exclusive Offer! Claim 50% flat cashback on your iPhone 15 purchase through Razorpay Trusted Gateway:
+https://razorpay-fast-checkout.online/pay?amt=34999
+Limited slots left for today only! Complete payment to avoid offer cancellation.
+
+--------------------------------------------------------------------------------
+[CATEGORY 2: UPI PIN REVERSAL & QR COLLECT SCAMS]
+--------------------------------------------------------------------------------
+
+[TEST 2.1 - Swiggy/Zomato Failed Order Refund Trap]
+Congratulations! You have received a cashback refund of Rs. 3,499 for your failed Swiggy order.
+To receive this money directly into your bank account:
+1. Scan the attached QR code in GooglePay / PhonePe / Paytm
+2. Enter your UPI PIN to claim and accept the cashback refund immediately.
+3. Offer expires today!
+Payee Handle: refund.support.desk@oksbi
+
+[TEST 2.2 - OLX / Marketplace Army Officer Buyer QR Scam]
+Sir, I am Army Officer Rahul. I want to buy your sofa immediately for Rs 18,000. I am sending you a Govt Defence QR code. Just scan this QR code and enter your 6-digit UPI PIN to receive the advance payment into your account. Do it fast as I am on duty.
+Payee VPA: defence.cantt.pay@okhdfcbank
+
+[TEST 2.3 - Google Pay Scratch Card Cashback Bait]
+Google Pay Reward Alert: You won a lucky scratch card bonus of Rs 4,999!
+Click here to claim your reward: https://gpay-rewards-claim.top/scratch
+Approve the UPI collect request in your app to credit money to your bank account.
+
+--------------------------------------------------------------------------------
+[CATEGORY 3: BANKING & KYC SUSPENSION PANIC]
+--------------------------------------------------------------------------------
+
+[TEST 3.1 - SBI YONO Account Suspension Threat]
+URGENT NOTICE from State Bank: 
+Dear Customer, your SBI YONO Netbanking access will be blocked today due to pending PAN/Aadhaar re-KYC. 
+Click immediately to update your KYC and avoid Rs. 1000 penalty:
+https://sbi-kyc-update-portal.online/auth
+Regards,
+SBI Security Division
+
+[TEST 3.2 - HDFC NetBanking Reward Points Expiry]
+Dear HDFC Customer, your 9,840 reward points worth Rs 7,850 will expire tonight! Redeem points directly as cash into your account by logging in here:
+https://hdfc-reward-redeem.site/login
+Do not share this link with anyone.
+
+[TEST 3.3 - ICICI Bank Debit Card Block Alert]
+Alert: Your ICICI Bank Debit Card ending with 4019 is deactivated due to suspicious international transaction. Call urgent helpline officer at 9811223344 or verify card details immediately at:
+https://icicibank-card-protect.xyz/verify
+
+--------------------------------------------------------------------------------
+[CATEGORY 4: UTILITY & ELECTRICITY BILL DISCONNECTION]
+--------------------------------------------------------------------------------
+
+[TEST 4.1 - Electricity Power Cut at 9:30 PM]
+Dear Consumer, your electricity power connection will be disconnected tonight at 9:30 PM from the main grid because your previous month bill was unpaid. Immediately contact our electricity power officer Mr. Verma at 9876541230 or pay through portal:
+https://electricity-bill-pay-online.info/desk
+
+[TEST 4.2 - SIM Card / Telecom KYC Deactivation Notice]
+Jio/Airtel Alert: Your SIM card services and incoming calls will be stopped within 24 hours due to unverified Aadhaar biometric data. To keep your number active, update immediately at:
+https://telecom-sim-verification.club/kyc
+
+--------------------------------------------------------------------------------
+[CATEGORY 5: TELEGRAM / WHATSAPP JOB & TASK SCAMS]
+--------------------------------------------------------------------------------
+
+[TEST 5.1 - Part-Time YouTube Reviewer / Daily Task Deposit]
+Hello Dear Candidate! We reviewed your resume on Naukri and selected you for the Part-Time YouTube Video Reviewer Role. Earn Rs. 3,500 - Rs. 8,000 daily with instant payouts. 
+To activate your task dashboard, deposit a refundable registration fee of Rs. 999 to our task manager VPA:
+task.manager98@paytm
+Limited slots available today. Join our Telegram channel to start: https://t.me/parttime-daily-task-work
+
+[TEST 5.2 - Crypto Doubling / VIP Trading Investment]
+Guaranteed 300% profit in 24 hours! Deposit minimum Rs 5,00,000 in our automated AI trading pool and receive Rs 15,000 directly to your bank account. 100% RBI approved risk-free plan. 
+Send funds to VPA: crypto.invest.growth@okicici
+Join VIP VIP Telegram: https://t.me/crypto-guaranteed-returns
+
+--------------------------------------------------------------------------------
+[CATEGORY 6: CUSTOMS, COURIER & DIGITAL ARREST THREATS]
+--------------------------------------------------------------------------------
+
+[TEST 6.1 - FedEx Illegal Narcotics Parcel Seizure]
+URGENT: FedEx Customs Department Notice. A parcel booked under your Aadhaar number containing illegal narcotics, 5 passports, and undeclared foreign currency has been intercepted at Mumbai Airport. Delhi Police Cyber Crime cell has issued an immediate arrest warrant. Call customs nodal officer immediately at 9123456780 to settle penalty and avoid police raid.
+
+[TEST 6.2 - India Post Failed Delivery Address Fee]
+India Post Alert: Your package with tracking #IN8392193 cannot be delivered due to incomplete street address. Please update your address and pay standard re-delivery fee of Rs 25 within 12 hours:
+https://indiapost-address-update.xyz/track
+
+--------------------------------------------------------------------------------
+[CATEGORY 7: INSTANT LOAN & ADVANCE FEE FRAUD]
+--------------------------------------------------------------------------------
+
+[TEST 7.1 - Pre-Approved Instant Loan Deposit Fee]
+Congratulations! Your Personal Loan of Rs 5,00,000 is APPROVED at 0% interest under PM Mudra Scheme. To disburse funds directly to your savings account, pay a mandatory processing charge of Rs 1,499 to:
+loan.officer@oksbi
+Offer valid only for today!
+
+--------------------------------------------------------------------------------
+[CATEGORY 8: LEGITIMATE & VERIFIED SAFE MESSAGES (0% SCAM RISK)]
+--------------------------------------------------------------------------------
+
+[TEST 8.1 - Genuine Razorpay Payment Receipt]
+Hi Anshul, your payment of Rs 1,499 to Urban Company via Razorpay was successful!
+Payment ID: pay_Nq73Ks81JkLm90
+Order ID: order_MB83910398
+You can view your invoice and transaction details on our official portal:
+https://pages.razorpay.com/pl_verified_merchant/receipt
+Thank you for choosing Razorpay. For queries, reach us at support@razorpay.com.
+
+[TEST 8.2 - Genuine Bank Account Debit Alert (Standard ATM/POS)]
+Dear Customer, your A/C ending 4910 has been debited by INR 850.00 on 27-Aug-2026 at STARBUCKS COFFEE. Available balance: INR 42,190.00. - HDFC Bank
+
+[TEST 8.3 - Genuine Bank OTP Verification SMS]
+948102 is your secret OTP for transaction of INR 2,450.00 at AMAZON INDIA on your HDFC Bank Card ending 1084. OTP is valid for 5 mins. Do not share OTP with anyone including bank officials.
+
+[TEST 8.4 - Genuine Amazon Delivery Tracking Notice]
+Your Amazon package with tracking #AMZN9481920 is out for delivery today by 8 PM. Track your order on the official Amazon app: https://amazon.in
+
+[TEST 8.5 - Genuine Swiggy Order Delivery Status]
+Your Swiggy order from Biryani Blues is out for delivery! Track your delivery partner live on the official Swiggy app: https://swiggy.com. Delivery partner: Rajesh (9876500000).
+
+[TEST 8.6 - Genuine Corporate HR Interview Invitation]
+Dear Anshul, Thank you for applying for the Software Engineering role at Razorpay. We would like to invite you for a 45-minute technical discussion over Google Meet. Please find the meeting invite on your calendar. Regards, Talent Acquisition Team, Razorpay.
+
+================================================================================
+

@@ -1,0 +1,21 @@
+Dear Merchant, 
+
+Your Razorpay settlement of Rs 48,250 has been put on hold due to compliance discrepancy. 
+
+To release payment instantly to your bank account, verify your merchant credentials immediately at:
+https://razorpay-merchant-verification.xyz/login?id=94821
+
+Failure to verify within 24 hours will result in permanent account suspension and regulatory penalty.
+
+- Razorpay Merchant Risk Desk (support-rzp@okaxis)
+
+Dear Merchant, 
+
+Your Razorpay settlement of Rs 48,250 has been put on hold due to compliance discrepancy. 
+
+To release payment instantly to your bank account, verify your merchant credentials immediately at:
+https://accounts.razorpay.com/auth/?auth_intent=login&redirecturl=https%3A%2F%2Fdashboard.razorpay.com%2F&x-country-code=IN
+
+Failure to verify within 24 hours will result in permanent account suspension and regulatory penalty.
+
+- Razorpay Merchant Risk Desk (https://razorpay.com/support/)

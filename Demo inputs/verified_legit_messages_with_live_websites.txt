@@ -1,0 +1,94 @@
+================================================================================
+  SENTINEL AI 2.0 - VERIFIED LEGITIMATE MESSAGES (GROUND TRUTH / LIVE WEBSITES)
+  Each message below contains 100% LIVE, ACTIVE, HTTP 200 verified websites.
+================================================================================
+
+[SAMPLE 1: Official Razorpay Payment Receipt & Support Link]
+Hi Anshul, your payment of Rs 1,499 to Urban Company via Razorpay was successful!
+Payment ID: pay_Nq73Ks81JkLm90
+Order ID: order_MB83910398
+You can view your invoice and transaction details on our official support portal:
+https://razorpay.com/support/
+Thank you for choosing Razorpay. For queries, reach us at support@razorpay.com.
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 2: Official Razorpay Merchant Dashboard Authentication]
+Dear Merchant,
+
+Your monthly Razorpay merchant settlement summary for August 2026 is now available. 
+
+To review your settlements, download GST invoices, or update your registered bank account, please log in to your official merchant dashboard at:
+https://accounts.razorpay.com/auth/?auth_intent=login
+
+- Razorpay Merchant Services (https://razorpay.com)
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 3: Official HDFC Bank NetBanking Security Notice]
+Dear Customer,
+
+Your HDFC Bank NetBanking password was successfully updated on 27-Aug-2026. 
+
+If this was not done by you, report immediately to our 24x7 customer desk or lock your access securely via the official NetBanking portal:
+https://netbanking.hdfcbank.com/netbanking/
+
+HDFC Bank will never ask for your NetBanking password, OTP, or CVV.
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 4: Official State Bank of India (SBI) Portal Alert]
+Dear SBI Customer,
+
+We have enhanced security features on our internet banking portal. Always ensure you access State Bank of India services only through our official website:
+https://onlinesbi.sbi/
+
+Never share your User ID, Password, or OTP with anyone. Bank officials never ask for confidential credentials.
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 5: Official Amazon India Order & Tracking Confirmation]
+Hi Anshul,
+
+Your Amazon order #402-9182391-8271029 has been shipped and is out for delivery today by 7 PM.
+
+Track your package live or manage delivery instructions on our official Amazon portal:
+https://www.amazon.in/gp/css/order-history
+
+Thank you for shopping with Amazon India!
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 6: Official Swiggy Order Support & Helpdesk]
+Hi Anshul,
+
+Thank you for contacting Swiggy Support regarding your recent order. 
+
+Our care team has resolved your ticket (#SWG-891028). You can view the full conversation history and resolution summary on the official Swiggy Help Center:
+https://www.swiggy.com/support
+
+Have a great meal! - Team Swiggy
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 7: Official UIDAI Aadhaar Verification Service]
+Dear Resident,
+
+To download your e-Aadhaar, check Aadhaar-Bank linking status, or update your demographic details, please access the official Government of India MyAadhaar portal directly at:
+https://myaadhaar.uidai.gov.in/
+
+UIDAI never sends SMS or WhatsApp asking for biometric OTPs or payment.
+
+--------------------------------------------------------------------------------
+
+[SAMPLE 8: Official Income Tax Department E-Filing Portal]
+Dear Taxpayer,
+
+Your Income Tax Return (ITR) for Assessment Year 2026-27 has been successfully verified. 
+
+You can download your ITR-V acknowledgment receipt and track refund processing status by logging in to the official Income Tax e-Filing portal:
+https://eportal.incometax.gov.in/
+
+- Income Tax Department, Government of India
+================================================================================
+

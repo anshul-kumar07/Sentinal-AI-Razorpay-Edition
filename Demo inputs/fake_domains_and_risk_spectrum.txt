@@ -1,0 +1,101 @@
+================================================================================
+  SENTINEL AI 2.0 - FAKE DOMAINS & GRADUATED RISK SPECTRUM (10% TO 100%)
+  Demonstrating Cross-Agent Consciousness, Distinct Specialization & Tiered Risk
+================================================================================
+
+--------------------------------------------------------------------------------
+[TIER 1: 0% - 10% RISK | VERIFIED SAFE / LEGITIMATE]
+--------------------------------------------------------------------------------
+Scenario: Authentic Razorpay Invoice Receipt
+Payload:
+Hi Anshul, your payment of Rs 1,499 to Urban Company via Razorpay was successful!
+Payment ID: pay_Nq73Ks81JkLm90
+Order ID: order_MB83910398
+You can view your invoice and transaction details on our official support portal:
+https://razorpay.com/support/
+Thank you for choosing Razorpay. For queries, reach us at support@razorpay.com.
+
+🤖 How Each Agent Thinks:
+  • OSINT Agent (0%): Confirms 'razorpay.com' matches official registered trademark list.
+  • Live Web Agent (0%): Probes live HTTPS -> HTTP 200 OK. Verified active web page.
+  • Fintech Agent (0%): Verified legitimate Razorpay infrastructure. No fake VPAs.
+  • Cognitive Agent (0%): Professional transactional tone, zero artificial panic.
+  • Defense Agent: Positive verification confirmation.
+
+--------------------------------------------------------------------------------
+[TIER 2: 20% - 30% RISK | LOW / MINIMAL ANOMALY]
+--------------------------------------------------------------------------------
+Scenario: Real Domain with Soft Urgency / Marketing Pressure
+Payload:
+Flash Sale Alert! Get 15% off on your next Swiggy order when you pay using Razorpay. Offer valid only for the next 6 hours. Order now on official Swiggy portal:
+https://www.swiggy.com/support
+
+🤖 How Each Agent Thinks:
+  • OSINT Agent (0%): Official domain 'swiggy.com' validated.
+  • Live Web Agent (0%): Live HTTP 200 OK.
+  • Fintech Agent (0%): Clean payment mechanics.
+  • Cognitive Agent (25%): Detects promotional urgency keyword ("next 6 hours").
+  • Consensus: 0% - 20% (Safe with low promotional urgency).
+
+--------------------------------------------------------------------------------
+[TIER 3: 40% - 50% RISK | MEDIUM / SUSPICIOUS ANOMALY]
+--------------------------------------------------------------------------------
+Scenario: Unregistered Generic Link with Task Reward Bait
+Payload:
+Earn rewards easily! Complete 3 daily feedback surveys on https://daily-reward-tasks.org/survey to claim shopping vouchers. Offer valid for 24 hours.
+
+🤖 How Each Agent Thinks:
+  • OSINT Agent (40%): Hyphenated domain masking + reward bait keyword.
+  • Live Web Agent (45%): Live probe indicates unreachable/offline server.
+  • Fintech Agent (0%): No direct bank or payment scam detected.
+  • Cognitive Agent (20%): Minor task-reward lure.
+  • Consensus: 45% (Medium Risk / Proceed with Scrutiny).
+
+--------------------------------------------------------------------------------
+[TIER 4: 50% - 60% RISK | HIGH RISK / DEAD PHISHING LINK]
+--------------------------------------------------------------------------------
+Scenario: India Post Failed Delivery on Suspicious .xyz Domain
+Payload:
+India Post Alert: Package #IN83910398 cannot be delivered due to address mismatch. Update your street address and pay re-delivery fee of Rs 25 within 12 hours:
+https://indiapost-address-update.xyz/pay
+
+🤖 How Each Agent Thinks:
+  • OSINT Agent (65%): High-risk '.xyz' TLD + IndiaPost brand keyword on unofficial domain + double hyphens.
+  • Live Web Agent (45%): Dead / unresolving DNS host.
+  • Fintech Agent (35%): Advance re-delivery fee mechanism.
+  • Cognitive Agent (40%): 12-hour artificial countdown deadline.
+  • Consensus: 50% - 60% (High Risk Phishing Lure).
+
+--------------------------------------------------------------------------------
+[TIER 5: 75% - 85% RISK | SEVERE BRAND TYPOSQUATTING GATEWAY]
+--------------------------------------------------------------------------------
+Scenario: Spoofed Razorpay Merchant Verification Portal
+Payload:
+Dear Merchant, your Razorpay settlement of Rs 48,250 is on hold! To release payment instantly to your bank account, verify your credentials at:
+https://razorpayy-secure-login.com/auth
+Failure to verify will result in permanent suspension.
+
+🤖 How Each Agent Thinks:
+  • OSINT Agent (85%): Levenshtein distance flag -> 'razorpayy' is a lookalike typosquat of registered brand 'RAZORPAY'.
+  • Live Web Agent (45%): Probing reveals unverified third-party host.
+  • Fintech Agent (90%): CRITICAL: Spoofed Razorpay gateway impersonation.
+  • Cognitive Agent (45%): Threat of permanent account suspension.
+  • Consensus: 85% (Critical Phishing Threat).
+  • Defense Agent: Auto-generates Razorpay Abuse Takedown notice for 'abuse@razorpay.com'.
+
+--------------------------------------------------------------------------------
+[TIER 6: 90% - 100% RISK | CATASTROPHIC MULTI-VECTOR FRAUD]
+--------------------------------------------------------------------------------
+Scenario: Triple Attack (Fake Gateway + UPI Reversal Drain + Digital Arrest)
+Payload:
+URGENT NOTICE: Delhi Police Cyber Crime & Razorpay Risk Division. Unsettled fraud transaction of Rs 48,250 on your merchant account. To avoid immediate non-bailable digital arrest warrant, verify credentials at https://razorpay-merchant-verification.xyz and enter your UPI PIN on GooglePay to refund@okaxis within 2 hours to clear your name.
+
+🤖 How Each Agent Thinks:
+  • OSINT Agent (95%): Fake Razorpay brand name + high-risk '.xyz' TLD.
+  • Live Web Agent (80%): Unverified host / phishing credential harvesting target.
+  • Fintech Agent (95%): Impersonated VPA 'refund@okaxis' on personal bank handle + CRITICAL UPI PIN DEBIT PARADOX ('Enter PIN to clear name').
+  • Cognitive Agent (95%): Extreme police coercion ('Delhi Police non-bailable arrest warrant') + 2-hour panic countdown.
+  • Consensus: 95% - 100% (Maximum Critical Scam / Threat Level).
+  • Defense Agent: Generates dual CERT-In law enforcement dossier + Razorpay Abuse takedown notice.
+================================================================================
+

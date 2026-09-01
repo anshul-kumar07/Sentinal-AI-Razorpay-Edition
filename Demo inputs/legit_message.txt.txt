@@ -1,0 +1,11 @@
+Hi Anshul, 
+
+Your payment of Rs 1,499 to Urban Company via Razorpay was successful!
+Payment ID: pay_Nq73Ks81JkLm90
+Order ID: order_MB83910398
+
+You can view your invoice and transaction details on our official portal:
+https://razorpay.com/support/
+
+Thank you for choosing Razorpay. For queries, reach us at support@razorpay.com.
+
