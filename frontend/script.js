@@ -37,7 +37,7 @@ function setupPresetHandlers() {
   });
 }
 
-// Screenshot OCR Dropzone
+// Screenshot OCR Dropzone with Dual-Engine (Serverless RapidOCR + Client WebAssembly OCR)
 function setupImageDropzone() {
   const imageInput = document.getElementById("imageInput");
   const fileStatus = document.getElementById("fileStatus");
@@ -47,28 +47,69 @@ function setupImageDropzone() {
     if (!file) return;
 
     fileStatus.classList.remove("hidden");
-    fileStatus.innerText = `Uploaded: ${file.name} (Extracting text via OCR...)`;
+    fileStatus.innerText = `Uploaded: ${file.name} (Extracting text via Neural OCR...)`;
 
-    const formData = new FormData();
-    formData.append("image", file);
+    let extractedText = "";
 
+    // 1. Try backend serverless API first
     try {
-      logTelemetry("system", `Multimodal Vision: Uploaded screenshot '${file.name}'. Running Tesseract OCR...`);
+      logTelemetry("system", `Multimodal Vision: Uploaded screenshot '${file.name}'. Running Neural OCR...`);
+      const formData = new FormData();
+      formData.append("image", file);
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500);
+
       const res = await fetch(`${API_BASE}/api/analyze-image`, {
         method: "POST",
-        body: formData
+        body: formData,
+        signal: controller.signal
       });
-      const data = await res.json();
-      
-      if (data.extracted_text) {
-        document.getElementById("messageInput").value = data.extracted_text;
-        fileStatus.innerText = `OCR Success: Extracted ${data.extracted_text.length} characters.`;
-        renderSwarmResults(data);
-      } else {
-        fileStatus.innerText = "OCR: No readable text found.";
+      clearTimeout(timeoutId);
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.extracted_text && data.extracted_text.trim().length > 0) {
+          extractedText = data.extracted_text.trim();
+        }
       }
-    } catch (err) {
-      fileStatus.innerText = "OCR error: Backend not reachable.";
+    } catch (e) {
+      console.warn("Backend OCR skipped/failed, using Client WebAssembly OCR...", e);
+    }
+
+    // 2. If backend OCR is unavailable or returned empty (e.g. on static Vercel), run Client-Side WebAssembly OCR
+    if (!extractedText && typeof Tesseract !== "undefined") {
+      try {
+        fileStatus.innerText = `Running Neural WebAssembly OCR on '${file.name}'...`;
+        logTelemetry("thought", `📸 [Neural OCR Vision] Processing image locally via WebAssembly OCR...`);
+        
+        const workerResult = await Tesseract.recognize(file, "eng", {
+          logger: m => {
+            if (m.status === "recognizing text") {
+              const progress = Math.round(m.progress * 100);
+              fileStatus.innerText = `Extracting text via Neural OCR... (${progress}%)`;
+            }
+          }
+        });
+
+        if (workerResult && workerResult.data && workerResult.data.text) {
+          extractedText = workerResult.data.text.trim();
+        }
+      } catch (clientErr) {
+        console.error("Client OCR error:", clientErr);
+      }
+    }
+
+    // 3. Process Extracted Text
+    if (extractedText && extractedText.length > 0) {
+      document.getElementById("messageInput").value = extractedText;
+      fileStatus.innerText = `✅ OCR Success: Extracted ${extractedText.length} characters.`;
+      logTelemetry("decision", `✅ [Neural OCR Vision] Successfully extracted ${extractedText.length} characters from image.`);
+      // Automatically trigger Swarm analysis
+      await runSwarmInvestigation();
+    } else {
+      fileStatus.innerText = "OCR: Could not detect clear readable text. Please paste text directly.";
+      logTelemetry("warning", "⚠️ [Neural OCR Vision] Could not detect readable text in screenshot.");
     }
   });
 }

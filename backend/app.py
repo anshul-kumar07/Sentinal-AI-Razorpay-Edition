@@ -94,8 +94,11 @@ def reconstruct_natural_lines(ocr_result) -> str:
 
 
 def extract_text_from_image_safe(image_file) -> tuple[str, str | None]:
-    """Safely extracts text using RapidOCR (or Tesseract fallback) from uploaded image."""
+    """Safely extracts text using RapidOCR (with pure PIL/NumPy) from uploaded image."""
     try:
+        import io
+        import numpy as np
+
         if hasattr(image_file, "read"):
             image_bytes = image_file.read()
         elif isinstance(image_file, str) and os.path.exists(image_file):
@@ -104,23 +107,30 @@ def extract_text_from_image_safe(image_file) -> tuple[str, str | None]:
         else:
             return "", "Invalid image file format."
 
-        # 1. Try RapidOCR
+        # 1. Try RapidOCR with PIL/NumPy (Zero OpenCV dependency)
+        global rapid_ocr_engine
+        if rapid_ocr_engine is None:
+            try:
+                from rapidocr_onnxruntime import RapidOCR
+                rapid_ocr_engine = RapidOCR()
+            except Exception:
+                rapid_ocr_engine = None
+
         if rapid_ocr_engine is not None:
-            import numpy as np
-            import cv2
-            np_arr = np.frombuffer(image_bytes, np.uint8)
-            img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-            if img is not None:
-                ocr_result, _ = rapid_ocr_engine(img)
+            try:
+                img_pil = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+                img_np = np.array(img_pil)
+                ocr_result, _ = rapid_ocr_engine(img_np)
                 if ocr_result:
                     natural_text = reconstruct_natural_lines(ocr_result)
                     if natural_text:
                         return natural_text.strip(), None
+            except Exception as e:
+                print(f"RapidOCR processing error: {e}")
 
-        # 2. Try pytesseract fallback
+        # 2. Try pytesseract fallback if available
         try:
             import pytesseract
-            import io
             img_pil = Image.open(io.BytesIO(image_bytes))
             text = pytesseract.image_to_string(img_pil)
             if text.strip():
